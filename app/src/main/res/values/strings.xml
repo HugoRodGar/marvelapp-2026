@@ -2,5 +2,6 @@
     <string name="app_name">MarvelApp</string>
     <string name="local_source_superhero">Local_source_superhero</string>
     <string name="app_cache" />
+    <string name="Error">Error</string>
 
 </resources>

@@ -25,7 +25,6 @@ class SuperHeroXmlLocalDataSource(
 
     //-- Metodo para guardar un listado de SuperHero
     fun save(superHeroes: List<SuperHero>) {
-
         //-- apply{ } Scape Function
         sharedPref.edit().apply {
             putString(keySuperHero, serializer.toJson(superHeroes))
