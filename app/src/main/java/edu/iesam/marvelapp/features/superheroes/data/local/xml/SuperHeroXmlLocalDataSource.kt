@@ -60,4 +60,10 @@ class SuperHeroXmlLocalDataSource(
 
     }
 
+    fun update(superHero: SuperHero) {
+        val superHeroes = findAll().filterNot { it.id == superHero.id }.toMutableList()
+        superHeroes.add(superHero)
+        save(superHeroes)
+    }
+
 }
