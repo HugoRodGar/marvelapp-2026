@@ -1,10 +1,18 @@
 package edu.iesam.marvelapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import edu.iesam.marvelapp.core.cache.AppCacheTTL
+import edu.iesam.marvelapp.core.serialization.GsonJsonSerializer
+import edu.iesam.marvelapp.core.time.LocalAppTime
+import edu.iesam.marvelapp.features.superheroes.data.SuperHeroDataRepository
+import edu.iesam.marvelapp.features.superheroes.data.local.xml.SuperHeroXmlLocalDataSource
+import edu.iesam.marvelapp.features.superheroes.data.remote.mock.SuperHeroMockRemoteDataSource
+import edu.iesam.marvelapp.features.superheroes.domain.SuperHero
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
